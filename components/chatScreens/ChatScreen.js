@@ -3,20 +3,29 @@ import ChatViewWrapper from "../wrappers/ChatViewWrapper";
 import BasicViewWrapper from "../wrappers/BasicViewWrapper";
 import Message from "./Message";
 
+import { ScrollView } from "react-native-gesture-handler";
 
+const ChatContainer = ({ route }) => {
 
-
-const ChatContainer = () => {
+  const {chatData} = route.params
   return (
     <BasicViewWrapper>
       <ChatViewWrapper>
-        <Message type="incoming" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, nisl id maximus sagittis, lacus augue cursus sapien, nec hendrerit ligula enim eu leo. "/>
-        <Message type="outgoing" content="volutpat condimentum. Etiam nec "/>
-        <Message type="incoming" content="hasellus eu enim id quam consectetur molestie sed eget ligula. Morbi dapibus semper lectus ac fermentum. Vestibulum ultricies viverra arcu, nec condimentum velit maximus nec. Quisque lobortis justo tortor, vitae faucibus ex commodo a. Curabitur sit amet ligula volutpat, lobortis felis pharetra, "/>
-        <Message type="outgoing" content=" ac odio placerat venenatis."/>
+        <ScrollView>
+          {chatData.messages.map((messageItem) => {
+            return (
+              <Message
+                key={messageItem.id}
+                type={messageItem.type}
+                date={messageItem.date}
+                content={messageItem.content}
+              />
+            );
+          })}
+        </ScrollView>
       </ChatViewWrapper>
     </BasicViewWrapper>
   );
 };
-  
+
 export default ChatContainer;
