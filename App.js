@@ -11,7 +11,11 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="ChatScreen" component={ChatScreen} />
+        <Stack.Screen
+          name="ChatScreen"
+          component={ChatScreen}
+          options={({ route }) => ({ title: route.params.chatData.senderName })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
