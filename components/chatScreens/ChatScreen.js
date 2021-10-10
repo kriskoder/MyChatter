@@ -5,14 +5,13 @@ import Message from "./Message";
 
 import { ScrollView } from "react-native-gesture-handler";
 
-const ChatContainer = ({ route }) => {
-
-  const {chatData} = route.params
+const ChatContainer = ({ route, navigation }) => {
+  const {chatMessages} = route.params
   return (
     <BasicViewWrapper>
       <ChatViewWrapper>
         <ScrollView>
-          {chatData.messages.map((messageItem) => {
+          {chatMessages.map((messageItem) => {
             return (
               <Message
                 key={messageItem.id}

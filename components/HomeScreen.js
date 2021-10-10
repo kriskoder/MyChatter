@@ -11,7 +11,8 @@ export const HomeScreen = ({ navigation }) => {
         title="Go to chat"
         onPress={() => {
           navigation.navigate("ChatScreen", {
-            chatData: chatMockData,
+            chatMessages: chatMockData.messages,
+            senderName: chatMockData.senderName
           });
         }}
       />
