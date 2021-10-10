@@ -9,8 +9,6 @@ const styles = StyleSheet.create({
   chatContainer: {
     display: "flex",
     flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
     width: '100%'
   },
 });
