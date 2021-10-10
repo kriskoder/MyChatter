@@ -1,10 +1,10 @@
 import React from "react";
-import { View as asdf, Text, Button } from "react-native";
-import GeneralContainerView from "./Utils/GeneralContainerView";
+import { Text, Button } from "react-native";
+import BasicViewWrapper from "./wrappers/BasicViewWrapper";
 
 export const HomeScreen = ({ navigation }) => {
   return (
-    <GeneralContainerView>
+    <BasicViewWrapper>
       <Text>Home Screnn</Text>
       <Button
         title="Go to chat"
@@ -12,7 +12,7 @@ export const HomeScreen = ({ navigation }) => {
           navigation.navigate("ChatScreen");
         }}
       />
-    </GeneralContainerView>
+    </BasicViewWrapper>
   );
 };
 

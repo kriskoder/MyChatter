@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const GeneralContainerView = ({children}) => {
+const BasicViewWrapper = ({children}) => {
   return (
     <View style={styles.container}>
       {children}
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-export default GeneralContainerView;
+export default BasicViewWrapper;
