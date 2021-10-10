@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   chatContainer: {
     display: "flex",
     flex: 1,
-    width: '100%'
+    width: '90%',
+    flexDirection: "column-reverse"
   },
 });
 

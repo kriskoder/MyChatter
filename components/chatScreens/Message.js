@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Message = ({ type }) => {
+const Message = ({ type, content }) => {
   const styleClass = { ...styles.container, ...styles[type] };
 
   return (
     <View style={styleClass}>
-      <Text>mock message text</Text>
+      <Text>{content}</Text>
     </View>
   );
 };
@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     borderRadius: 5,
-    marginBottom: 5,
+    marginBottom: 15,
+    maxWidth: '80%'
   },
   incoming: {
     backgroundColor: "#baefff",
