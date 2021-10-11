@@ -1,19 +1,25 @@
 import React from "react";
-import { View, TextInput, StyleSheet, Button, Text, Image } from "react-native";
+import { View, TextInput, StyleSheet, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const SendMessageContainer = () => {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.textInput} placeholder="Message..." />
-      <View style={styles.sendButton}>
-        <TouchableOpacity>
+      <View style={styles.textInputContainer}>
+        <TextInput style={styles.textInput} placeholder="Message..." />
+        <TouchableOpacity style={styles.cameraIconContainer}>
           <Image
             style={styles.iconStyle}
-            source={require("../../assets/icons/send-icon.png")}
+            source={require("../../assets/icons/camera-icon.png")}
           />
         </TouchableOpacity>
       </View>
+      <TouchableOpacity>
+        <Image
+          style={styles.iconStyle}
+          source={require("../../assets/icons/send-icon.png")}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -25,20 +31,28 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginVertical: 5,
   },
-  textInput: {
-    paddingHorizontal: 17,
-    borderRadius: 20,
-    flex: 7,
+  textInputContainer: {
     backgroundColor: "white",
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "center",
+    borderRadius: 20,
+    paddingRight: 10,
+    paddingLeft: 17,
     marginRight: 5,
   },
-  sendButton: {
+  cameraIconContainer: {
+    height: "75%",
     alignItems: "center",
-    flex: 1,
+    justifyContent: "center",
+    marginBottom: 3
+  },
+  textInput: {
+    flex: 1
   },
   iconStyle: {
     height: "100%",
-    aspectRatio: 1,
+    aspectRatio: 1
   },
 });
 
