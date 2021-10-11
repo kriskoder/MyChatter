@@ -4,6 +4,7 @@ import BasicViewWrapper from "../wrappers/BasicViewWrapper";
 import Message from "./Message";
 import { ScrollView } from "react-native-gesture-handler";
 import ChatHeaderIcons from "./ChatHeaderIcons";
+import SendMessageContainer from "./SendMessageComponent";
 
 const ChatContainer = ({ route, navigation }) => {
   const { chatMessages, senderName } = route.params;
@@ -31,6 +32,7 @@ const ChatContainer = ({ route, navigation }) => {
           })}
         </ScrollView>
       </ChatViewWrapper>
+      <SendMessageContainer />
     </BasicViewWrapper>
   );
 };
