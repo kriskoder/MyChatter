@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 7,
     maxWidth: "80%",
-    marginHorizontal: '4%'
+    marginHorizontal: '5%'
   },
   incoming: {
     backgroundColor: "#baefff",

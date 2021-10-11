@@ -2,14 +2,17 @@ import React, { useEffect } from "react";
 import ChatViewWrapper from "../wrappers/ChatViewWrapper";
 import BasicViewWrapper from "../wrappers/BasicViewWrapper";
 import Message from "./Message";
-
 import { ScrollView } from "react-native-gesture-handler";
+import ChatHeaderIcons from "./ChatHeaderIcons";
 
 const ChatContainer = ({ route, navigation }) => {
   const { chatMessages, senderName } = route.params;
 
   useEffect(() => {
-    navigation.setOptions({ title: senderName });
+    navigation.setOptions({
+      title: senderName,
+      headerRight: () => <ChatHeaderIcons />,
+    });
   }, []);
 
   return (
