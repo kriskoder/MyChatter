@@ -1,12 +1,13 @@
-export const mockUsersData = [
-  {
-    userId: 1,
-    userName: "Fabio",
-    userAvatar: require("../assets/userAvatars/p2.jpg"),
-  },
-  {
-    userId: 2,
-    userName: "Marko",
-    userAvatar: require("../assets/userAvatars/p1.jpg"),
-  },
-];
+function mockUserDataGenerator(userQuantity) {
+  const tempUsersData = [];
+  for (let index = 0; index < userQuantity; index++) {
+    tempUsersData.push({
+      userId: index,
+      userName: `Fabio${index}`,
+      userAvatar: require("../assets/userAvatars/p2.jpg"),
+    });
+  }
+  return tempUsersData;
+}
+
+export const mockUsersData = mockUserDataGenerator(20);
