@@ -9,7 +9,6 @@ import SendMessageContainer from "./SendMessageComponent";
 import chatMockData from "../../data/chatMockData";
 
 const ChatContainer = ({ navigation }) => {
-
   useEffect(() => {
     navigation.setOptions({
       title: chatMockData.senderName,
