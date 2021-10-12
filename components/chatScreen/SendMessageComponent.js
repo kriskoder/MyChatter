@@ -42,10 +42,9 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   cameraIconContainer: {
-    height: "75%",
+    height: "60%",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 3
   },
   textInput: {
     flex: 1
