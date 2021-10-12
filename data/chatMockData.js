@@ -1,4 +1,5 @@
 export default chatMockData = {
+  userId: 1,
   senderName: "Fabio",
   messages: [
     {

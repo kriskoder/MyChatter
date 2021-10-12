@@ -1,23 +1,30 @@
 import React from "react";
-import { Text, Button } from "react-native";
+import { Text, Button, StyleSheet, View } from "react-native";
 import BasicViewWrapper from "./wrappers/BasicViewWrapper";
-import chatMockData from "../data/chatMockData"
+
 
 export const HomeScreen = ({ navigation }) => {
   return (
     <BasicViewWrapper>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to chat"
-        onPress={() => {
-          navigation.navigate("ChatScreen", {
-            chatMessages: chatMockData.messages,
-            senderName: chatMockData.senderName
-          });
-        }}
-      />
+      <View style={styles.homeContainer}>
+        <Text>Home Screen</Text>
+        <Button
+          title="Go to chat"
+          onPress={() => {
+            navigation.navigate("MyChatter");
+          }}
+        />
+      </View>
     </BasicViewWrapper>
   );
 };
+
+const styles = StyleSheet.create({
+  homeContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 
 export default HomeScreen;
