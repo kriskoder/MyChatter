@@ -1,26 +1,36 @@
 import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
+
+import ChatTile from "../ChatTile";
+
 import BasicViewWrapper from "../wrappers/BasicViewWrapper";
 import { mockUsersData } from "../../data/users";
+import chatMockData from "../../data/chatMockData";
 
 const ChatsView = () => {
+  function lastMessageData(userId) {
+    const chatMessages = chatMockData.find((chatItem) => {
+      return chatItem.userId === userId;
+    }).messages;
+
+    const lastChatMessage = chatMessages[chatMessages.length - 1];
+    return lastChatMessage;
+  }
+
+  function lastMessageDate(userId) {
+    const lastMessageDate = lastMessageData(userId).date;
+  }
+
   return (
     <BasicViewWrapper>
       <ScrollView style={styles.chatsPanel}>
-        {mockUsersData.map((userItem) => (
-          <TouchableOpacity key={userItem.userId}>
-            <View style={styles.itemContainer}>
-              <Image style={styles.userAvatar} source={userItem.userAvatar} />
-              <View style={styles.chatDetailsContainer}>
-                <View style={styles.chatDetailsHeader}>
-                  <Text>{userItem.userName}</Text>
-                  <Text>21:12</Text>
-                </View>
-                <Text style={styles.chatDetailsMessage}>Last message....</Text>
-              </View>
-            </View>
-          </TouchableOpacity>
+        {mockUsersData.map(({ userAvatar, userName }) => (
+          <ChatTile
+            key={userName}
+            userAvatar={userAvatar}
+            userName={userName}
+          />
         ))}
       </ScrollView>
     </BasicViewWrapper>
@@ -30,28 +40,7 @@ const ChatsView = () => {
 const styles = StyleSheet.create({
   chatsPanel: {
     paddingHorizontal: 15,
-  },
-  itemContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    height: 70,
-  },
-  userAvatar: {
-    flex: 1,
-    maxWidth: 60,
-    aspectRatio: 1,
-    borderRadius: 30,
-  },
-  chatDetailsContainer: {
-    justifyContent: "space-between",
-    flex: 4,
-    paddingLeft: 10,
-  },
-  chatDetailsHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  chatDetailsMessage: {},
+  }
 });
 
 export default ChatsView;
