@@ -1,6 +1,7 @@
 export default chatMockData = [
   {
     userId: 0,
+    userName: 'Fabio',
     messages: [
       {
         id: 1,

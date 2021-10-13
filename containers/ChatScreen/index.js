@@ -14,7 +14,7 @@ const ChatContainer = ({ navigation }) => {
 
   useEffect(() => {
     navigation.setOptions({
-      title: chatData.userId,
+      title: chatData.userName,
       headerRight: () => <ChatHeaderIcons />,
     });
   }, []);
