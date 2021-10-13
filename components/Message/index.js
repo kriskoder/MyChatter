@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     marginHorizontal: '5%'
   },
   incoming: {
-    backgroundColor: "#baefff",
+    backgroundColor: "#FFF",
     alignSelf: "flex-start",
   },
   outgoing: {
-    backgroundColor: "#9ce8ff",
+    backgroundColor: "#bae5f5",
     alignSelf: "flex-end",
   },
 });

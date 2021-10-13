@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ChatScreen">
+      <Stack.Navigator initialRouteName="MyChatter">
         <Stack.Screen
           name="MyChatter"
           component={HomeScreen}

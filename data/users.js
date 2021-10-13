@@ -10,4 +10,4 @@ function mockUserDataGenerator(userQuantity) {
   return tempUsersData;
 }
 
-export const mockUsersData = mockUserDataGenerator(1);
+export const mockUsersData = mockUserDataGenerator(50);

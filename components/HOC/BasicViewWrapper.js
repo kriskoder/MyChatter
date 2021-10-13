@@ -12,7 +12,7 @@ const BasicViewWrapper = ({children}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#95c8f4"
+    backgroundColor: "#dbf0ff"
   },
 });
 export default BasicViewWrapper;
