@@ -3,6 +3,8 @@
   "scripts": {
     "start": "expo start",
     "android": "expo start --android --localhost",
+    "ios": "expo start --ios --localhost",
+    "tunnel": "expo start --tunnel",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject"
