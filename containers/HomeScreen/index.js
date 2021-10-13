@@ -2,9 +2,9 @@ import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
-import ChatTile from "../ChatTile";
+import ChatTile from "../../components/ChatTile";
 
-import BasicViewWrapper from "../wrappers/BasicViewWrapper";
+import BasicViewWrapper from "../../components/HOC/BasicViewWrapper";
 import { mockUsersData } from "../../data/users";
 import chatMockData from "../../data/chatMockData";
 

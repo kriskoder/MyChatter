@@ -1,7 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { chatHeaderIconResources } from "../icons";
-import HeaderIconWrapper from "../wrappers/HeaderIconWrapper";
+
+import { chatHeaderIconResources } from "../../assets";
+import HeaderIconWrapper from "../HOC/InteractionIconWrapper";
 
 const ChatHeaderIcons = () => {
   return (

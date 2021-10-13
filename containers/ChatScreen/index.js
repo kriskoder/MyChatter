@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
-import ChatViewWrapper from "../wrappers/ChatViewWrapper";
-import BasicViewWrapper from "../wrappers/BasicViewWrapper";
-import Message from "./Message";
 import { ScrollView } from "react-native-gesture-handler";
-import ChatHeaderIcons from "./ChatHeaderIcons";
-import SendMessageContainer from "./SendMessageComponent";
+
+import ChatViewWrapper from "../../components/HOC/ChatViewWrapper";
+import BasicViewWrapper from "../../components/HOC/BasicViewWrapper";
+import Message from "../../components/Message";
+import ChatHeaderIcons from "../../components/ChatHeaderIcons";
+import SendMessageContainer from "../../components/ChatInput";
 
 import chatMockData from "../../data/chatMockData";
 
 const ChatContainer = ({ navigation }) => {
+  chatData = chatMockData[0];
+
   useEffect(() => {
     navigation.setOptions({
-      title: chatMockData.senderName,
+      title: chatData.userId,
       headerRight: () => <ChatHeaderIcons />,
     });
   }, []);
@@ -20,7 +23,7 @@ const ChatContainer = ({ navigation }) => {
     <BasicViewWrapper>
       <ChatViewWrapper>
         <ScrollView>
-          {chatMockData.messages.map((messageItem) => {
+          {chatData.messages.map((messageItem) => {
             return (
               <Message
                 key={messageItem.id}
