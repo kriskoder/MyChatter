@@ -3,8 +3,8 @@ function mockUserDataGenerator(userQuantity) {
   for (let index = 0; index < userQuantity; index++) {
     tempUsersData.push({
       userId: index,
-      userName: `Fabio${index}`,
-      userAvatar: require("../assets/userAvatars/p2.jpg"),
+      userName: `Marciano Bonifacci`,
+      userAvatar: require("../assets/userAvatars/p1.jpg"),
     });
   }
   return tempUsersData;

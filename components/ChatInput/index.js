@@ -4,19 +4,19 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 const SendMessageContainer = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.sendMessageContainer}>
       <View style={styles.textInputContainer}>
         <TextInput style={styles.textInput} placeholder="Message..." />
         <TouchableOpacity style={styles.cameraIconContainer}>
           <Image
-            style={styles.iconStyle}
+            style={styles.cameraIconStyle}
             source={require("../../assets/icons/camera-icon.png")}
           />
         </TouchableOpacity>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity style={styles.sendIconContainer}>
         <Image
-          style={styles.iconStyle}
+          style={styles.sendIconStyle}
           source={require("../../assets/icons/send-icon.png")}
         />
       </TouchableOpacity>
@@ -25,7 +25,7 @@ const SendMessageContainer = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  sendMessageContainer: {
     marginHorizontal: "5%",
     height: 40,
     flexDirection: "row",
@@ -34,24 +34,36 @@ const styles = StyleSheet.create({
   textInputContainer: {
     backgroundColor: "white",
     flexDirection: "row",
-    flex: 1,
+    flex: 7,
     alignItems: "center",
     borderRadius: 20,
     paddingRight: 10,
     paddingLeft: 17,
     marginRight: 5,
   },
-  cameraIconContainer: {
-    height: "60%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   textInput: {
-    flex: 1
+    flex: 9,
   },
-  iconStyle: {
-    height: "100%",
-    aspectRatio: 1
+  cameraIconContainer: {
+    flex: 1,
+    justifyContent: "center",
+    marginRight: 3,
+  },
+  cameraIconStyle: {
+    height: 20,
+    aspectRatio: 1,
+  },
+  sendIconStyle: {
+    height: 20,
+    aspectRatio: 1,
+  },
+  sendIconContainer: {
+        width: 40,
+    height: 40,
+    backgroundColor: "#008cff",
+    borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

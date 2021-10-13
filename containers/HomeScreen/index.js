@@ -29,8 +29,8 @@ const ChatsView = ({ navigation }) => {
   return (
     <BasicViewWrapper>
       <ScrollView style={styles.chatsPanel}>
-        {mockUsersData.map(({ userAvatar, userName }) => (
-          <TouchableOpacity key={userName} onPress={navigateToChatScreen}>
+        {mockUsersData.map(({ userAvatar, userName }, index) => (
+          <TouchableOpacity key={index} onPress={navigateToChatScreen}>
             <ChatTile userAvatar={userAvatar} userName={userName} />
           </TouchableOpacity>
         ))}

@@ -13,7 +13,7 @@ const App = () => {
         <Stack.Screen
           name="MyChatter"
           component={HomeScreen}
-          options={{ title: "MyChatter" }}
+          options={{ title: "All Chats" }}
         />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
       </Stack.Navigator>
