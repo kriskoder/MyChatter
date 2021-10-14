@@ -2,7 +2,8 @@ import React from "react";
 import { View, TextInput, StyleSheet, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import colors from '../../constants/colors'
+import getTheme from '../../constants/colors'
+const colors = getTheme();
 
 const SendMessageContainer = () => {
   return (

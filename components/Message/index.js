@@ -1,13 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import colors from "../../constants/colors";
+
+import getTheme from '../../constants/colors'
+const colors = getTheme();
 
 const Message = ({ type, date, content }) => {
   const styleClass = { ...styles.container, ...styles[type] };
 
   return (
     <View style={styleClass}>
-      <Text>{content}</Text>
+      <Text style={styles.chatText}>{content}</Text>
     </View>
   );
 };
@@ -28,6 +30,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.messageSecondaryBg,
     alignSelf: "flex-end",
   },
+  chatText: {
+    color: colors.chatTextColor,
+    fontSize: 16,
+    lineHeight: 22
+    }
 });
 
 export default Message;
