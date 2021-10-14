@@ -16,10 +16,10 @@ const ChatHeaderIcons = () => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    height: '40%',
-    width: "50%",
+    height: 22,
+    width: 100,
     justifyContent: "space-between",
-    marginRight: "8%",
+    marginRight: 10,
   },
 });
 export default ChatHeaderIcons;

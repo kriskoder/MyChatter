@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import colors from "../../constants/colors";
 
 const Message = ({ type, date, content }) => {
   const styleClass = { ...styles.container, ...styles[type] };
@@ -17,14 +18,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 7,
     maxWidth: "80%",
-    marginHorizontal: '5%'
+    marginHorizontal: 10
   },
   incoming: {
-    backgroundColor: "#FFF",
+    backgroundColor: colors.messagePrimaryBg,
     alignSelf: "flex-start",
   },
   outgoing: {
-    backgroundColor: "#bae5f5",
+    backgroundColor: colors.messageSecondaryBg,
     alignSelf: "flex-end",
   },
 });
