@@ -1,1 +1,2 @@
-export const theme = 'dark'
+// accepts 'basic' or 'dark'
+export const theme = 'basic'

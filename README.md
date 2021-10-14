@@ -42,3 +42,6 @@ npm run android
 npm run ios
 ```
 2. Scan generated QR code with Expo app on your device.
+
+## Configuration
+The MyChatter theme is configurable in config.js file at app root level. Theme can be set as 'basic' or 'dark'
